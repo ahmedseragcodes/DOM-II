@@ -14,11 +14,20 @@ imgHolderArray.forEach(function(item){
 });
 });
 
-//Preventing document scroll when space bar is pressed 
+//Using preventDefault to prevent document scroll when space bar is pressed 
 document.addEventListener("keydown", function(event){
     event.preventDefault();
-})
+    if (event.keycode==32){
+};
+});
 
+//increasing text-size of paragraphs when moused over
+const paraHolder=document.querySelectorAll("p");
+for (let i=0; i<paraHolder.length; i++){
+paraHolder[i].addEventListener("mouseover", function(event){
+    event.target.style.fontSize="2rem";
+})
+}
 // const btnStorage=document.querySelectorAll(".btn");
 // btnStorage[0].style.backgroundColor="red";
 

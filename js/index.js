@@ -9,13 +9,11 @@ frontPageNavLinks.forEach(function(link){
 
  //Keydown
 
-const frontPageImages=document.querySelectorAll("img");
-frontPageImages.forEach(function(image){
-    image.addEventListener("keydown", function(event){
-        if (event.key===13){
-            console.log("hello");
+document.addEventListener("keydown", function(event){
+        if (event.key==="Enter"){
+            event.target.scrollIntoView();
         }
     })
-})
+
 
 

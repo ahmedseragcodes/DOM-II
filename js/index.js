@@ -81,3 +81,24 @@ footerSubFormEmail.addEventListener("select", function(event){
     window.addEventListener("resize",function(event){
         console.log("resized");
     })
+
+//Scroll - Can't get it to work 
+
+frontPageMainContent.forEach(function(textBlurb){
+    textBlurb.addEventListener("scroll",function(event){
+        if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350){
+        event.target.style.color="green";
+        }
+    })
+})
+
+//Image DoubleClick results in ridged border around image 
+
+const frontPageImgs=document.querySelectorAll("img");
+frontPageImgs.forEach(function(image){
+    image.addEventListener("dblclick", function(event){
+        event.target.style.border="1rem ridge aqua";
+    })
+})
+
+//drag/drop

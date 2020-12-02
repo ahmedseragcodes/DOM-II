@@ -7,6 +7,14 @@ frontPageNavLinks.forEach(function(link){
     })
 })
 
+//preventDefault preventing window refresh upon click
+frontPageNavLinks.forEach(function(link){
+    link.addEventListener("click", function(event){
+        event.target.preventDefault();
+    })
+})
+
+
  //Keydown that takes you to the top of the page when you hit enter 
 
 document.addEventListener("keydown", function(event){
@@ -92,13 +100,22 @@ frontPageMainContent.forEach(function(textBlurb){
     })
 })
 
-//Image DoubleClick results in ridged border around image 
+//Image DoubleClick results in ridged border around image, added stopPropagation so clicks don't trigger event listeners on parent elements
 
 const frontPageImgs=document.querySelectorAll("img");
 frontPageImgs.forEach(function(image){
     image.addEventListener("dblclick", function(event){
         event.target.style.border="1rem ridge aqua";
+        event.stopPropagation();
     })
 })
 
-//drag/drop
+//mouseenter bolds front page paragraphs 
+
+const frontPageParas=document.querySelectorAll("p");
+frontPageParas.forEach(function(para){
+    para.addEventListener("mouseenter", function(event){
+        event.target.style.fontWeight="bold";
+    })
+})
+

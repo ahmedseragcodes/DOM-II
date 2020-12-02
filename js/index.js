@@ -67,3 +67,12 @@ footerSubForm.prepend(footerSubFormLabel);
 footerSubFormEmail.addEventListener("focus", function(event){
     event.target.style.padding="2rem";
 })
+
+footerSubFormEmail.addEventListener("select", function(event){
+    event.target.style.backgroundColor="#FBAB7E";
+    event.target.style.backgroundImage="linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)"
+    console.log("it occured");
+})
+
+
+//Resize

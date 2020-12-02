@@ -68,6 +68,7 @@ footerSubFormEmail.addEventListener("focus", function(event){
     event.target.style.padding="2rem";
 })
 
+//Form text select adds nice gradient background color
 footerSubFormEmail.addEventListener("select", function(event){
     event.target.style.backgroundColor="#FBAB7E";
     event.target.style.backgroundImage="linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)"
@@ -75,4 +76,8 @@ footerSubFormEmail.addEventListener("select", function(event){
 })
 
 
-//Resize
+//Resize window console logs message resized 
+
+    window.addEventListener("resize",function(event){
+        console.log("resized");
+    })

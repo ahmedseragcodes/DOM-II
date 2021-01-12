@@ -44,3 +44,21 @@ window.addEventListener("keydown", function(event){
         })
     }
 })
+
+//mouseover event creates increases font size of target paragraph 
+
+const allParagraphsArray=Array.from(document.querySelectorAll("p"));
+allParagraphsArray.forEach(function(p){
+    p.addEventListener("mouseover", function(event){
+        console.log("selected");
+        event.target.style.fontSize="2rem";
+    })
+})
+
+//Mouseenter on pics adds border
+
+frontPageImgsArray.forEach(function(img){
+    img.addEventListener("mouseenter", function(event){
+        event.target.style.border="1rem ridge black";
+    })
+})

@@ -76,3 +76,19 @@ frontPageImgsArray.forEach(function(img){
 window.addEventListener("load", function(event){
     console.log(`${event.target} has loaded`);
 })
+
+//Upon scroll border added to target 
+
+window.addEventListener("wheel", function(event){
+    event.target.style.border="1rem ridge black";
+})
+
+//Upon Mouse Leave and Scroll, Border Is Removed
+
+window.addEventListener("mouseleave", function(event){
+    event.target.style.border="none";
+})
+
+window.addEventListener("scroll", function(event){
+    event.target.style.border="none";
+})

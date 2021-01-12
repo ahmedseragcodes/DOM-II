@@ -62,3 +62,17 @@ frontPageImgsArray.forEach(function(img){
         event.target.style.border="1rem ridge black";
     })
 })
+
+//Mouseout removes border from images from mouseenter 
+
+frontPageImgsArray.forEach(function(img){
+    img.addEventListener("mouseout", function(event){
+        event.target.style.border="none";
+    })
+})
+
+//Upon page load console logs page loaded
+
+window.addEventListener("load", function(event){
+    console.log(`${event.target} has loaded`);
+})
